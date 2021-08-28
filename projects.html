@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    
+    <link rel="stylesheet" href="stylesheet.css">
+    
+    <title>Jesper Persson</title>
+</head>
+<body>
+    <header>
+    <nav class="main__nav project-nav"> 
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="projects.html">Projects</a></li>
+        </ul>
+        </nav>
+
+    <div>
+<h1 class="hero__title">Jesper Persson</h1>
+<div class="dropdown">
+    <img src="images/menu.svg" onclick="openHamburger()" class="dropbtn">
+    <div id="myDropdown" class="dropdown-content">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </div>
+</div>
+</div>
+</header>
+
+
+
+<div class="slides__container">
+
+    <!-- Full-width images with number and caption text -->
+    <div class="my__slides my__fade">
+      <div class="numbertext">1 / 4</div>
+      <img src="images/book.jpg" type="button" data-bs-toggle="modal" data-bs-target="#project1">
+      <div class="text">Book Shop</div>
+    </div>
+
+<!-- Modal 1-->
+<div class="modal fade" id="project1" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalLabel">Book Shop</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p class="modaltext">This project was an asignment during the .Net-developer studies. The aim for the task was to create 
+            an application that could be used as an online book shop. The application was built with the design pattern MVC.  </p>
+        <img src="images/bookshopvs.png" alt="">
+        <p class="modaltext">Further on I had to develop and integrate the backend logic that runs all the communication with the database. 
+          In this specific project SQL Server was used. For more detailed information, please check out my repo at <a target="_blank" href="https://github.com/AndersJesperPersson/WebbshopAPI">github.</a> </p>
+
+          </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="my__slides my__fade">
+    <div class="numbertext">2 / 4</div>
+    <img src="images/household.jpg" type="button" data-bs-toggle="modal" data-bs-target="#houseHoldEconomy">
+    <div class="text">Household Economy</div>
+  </div>
+
+  <!-- Modal 2 -->
+<div class="modal fade" id="houseHoldEconomy" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalLabel">Household Economy</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p class="modaltext">The household Economy project was my first team project. Together we created a basic application that was supposed to help you calculcate on your monthly 
+          incomes and outcomes. Great tool to use if you want to set up how much you can possible save every month. By this project I´ve learned a great deal about my self and what 
+          kind of enviroment that maximise my work. We created the architect together and then splitted up the work. I was responisble for the report and writing the code for calculations.
+          Down listed pictures are print screens where the first one shows a report that generates by
+          the application and the second one is print screen from the code base that I´ve built.</p>
+        <img src="images/report.png" alt="">
+        <p class="modaltext img-text">an example of what a report could look like</p>
+        <img src="images/codeEconomy.png" alt="">
+        <p class="modaltext img-text">Inspired by clean code, most of the code is extracted to own methods</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="my__slides my__fade">
+    <div class="numbertext">3 / 4</div>
+    <img src="images/game.png" type="button" data-bs-toggle="modal" data-bs-target="#Game">
+    <div class="text text-three">Doodle Jump</div>
+  </div>
+  <!-- Modal 3 -->
+<div class="modal fade" id="Game" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalLabel">Doodle Jump  
+        </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p class="modaltext">Doodle Jump is a popular and classic game. This one is written in javascript and styled with css. </p>
+          <img src="images/game.png" alt="">
+          <p class="modaltext">A print screen of what the game looks like.</p>
+            <img src="images/game over.png" alt="">
+            <p class="modaltext img-text">When the game is over, the score displays. </p>
+            <p class="modaltext playgame"><a target="_blank" href="game.html">Play my game here</a></p>
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="my__slides my__fade">
+  <div class="numbertext">4 / 4</div>
+  <img src="images/tree.jpg" type="button" data-bs-toggle="modal" data-bs-target="#FamilyTree">
+  <div class="text">Family Tree</div>
+</div>
+
+<!-- Modal 4 -->
+<div class="modal fade" id="FamilyTree" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="modalLabel">The family tree  
+      </h5>
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+      <p class="modaltext"> The family tree is an application that integrates with a database. The user interface is kind of simple and is printed in a console window.
+        However the strucute of the code and how certain methods are reused is what drilled me in this assignment. </p>
+        <img src="images/FamilyTree.png" alt="">
+        <p class="modaltext">This is what´s presented to the user when open the application. As you can see it´s based on CRUD principles which 
+          are the four basic operations of persistent storage. CRUD is also sometimes used to describe user interface conventions that facilitate viewing,
+          searching, and changing information using computer-based forms and reports.</p>
+          <img src="images/CreatePerson.png" alt="">
+          <p class="modaltext img-text">What´s the app displays when creating a new person</p>
+          <img src="images/read.png" alt="">
+          <p class="modaltext img-text">And if you want to find out information about your relative</p>
+
+
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+    </div>
+  </div>
+</div>
+</div>
+  
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="navigateSides(-1)">&#10094;</a>
+    <a class="next" onclick="navigateSides(1)">&#10095;</a>
+  </div>
+
+  <br>
+  
+
+
+<p class="info-text"> Click on the picture to read more about the project</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    <footer class="footer">
+      <div class="icons"> 
+     <a href="https://www.linkedin.com/in/jesper-persson-84845615b/"> <img src="images/linkedInBlue.svg" alt=""></a>
+     <a href="https://github.com/AndersJesperPersson"><img src="images/Github.svg" alt=""></a>
+    </div>
+  </footer>
+
+
+<script type="text/javascript" src="dropdown.js"></script>
+<script type="text/javascript" src="project.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+
+
+</body>
+</html>

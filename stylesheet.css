@@ -1,0 +1,746 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;1,100;1,200;1,400;1,500&display=swap');
+
+/**************************/
+/*  Common for all page     */
+/*--------------------------*/
+/*01.Globals                */
+/*02- Nav                   */
+/*03. Dropdown              */
+/*04 .Hero                  */                
+/*05 .Footer                */
+/**************************/
+
+
+/**************************/
+/*01. Globals                */
+/**************************/
+:root{
+--clr-primary:black;
+--clr-primary-light: rgb(87, 85, 85);
+--clr-secondary: #ffff;
+--clr-secondary-dark: rgb(212, 209, 209);
+--clr--box: rgb(250, 196, 186); 
+}
+
+*
+{
+    box-sizing: border-box;
+}
+
+body{
+    margin:0;
+    padding: 0;
+   background-color: var(--clr-primary);
+    color: var(--clr-secondary);
+    opacity: 0.8;
+    font-family: "poppins", sans-serif;   
+}
+
+img{
+    max-width: 100%;
+}
+
+    @media screen and (min-width: 1025px) {
+
+    /* border line that works with the pages*/
+body{
+    height: calc(100vh - 8vh);
+    border: var(--clr--box) solid;
+    margin: 20px;
+    background: black;
+
+    }
+}
+
+/**************************/
+/*02. Nav                 */
+/**************************/
+
+/* The menu bar is invisible on mobile devices*/
+
+.main__nav ul{
+    display:none;
+    list-style-type: none;
+    padding: 0;  
+}
+.main__nav a{
+    color: var(--clr-secondary-dark);
+    text-decoration: none;
+}
+
+/* extra magrin on project-side beacause of the implementation of bootstrap*/
+.project-nav{
+    margin-top: 1.7em;
+}
+
+/*properties for menu bar */
+    @media screen and (min-width: 1025px) {
+
+.main__nav ul{ 
+    display: flex;
+    font-size: 1.6em;  
+    justify-content: center;
+    gap: 15vw;   
+    font-weight:200;
+    color: var(--clr-secondary)
+    margin-bottom:5vh;     
+    }
+
+.main__nav a:hover, .main__nav   a:focus {
+    background-color: var(--clr--box);
+    color:black;
+    box-shadow: 6px 3px 3px rgb(232, 243, 255);
+    border-radius: 4%;    
+    }  
+    }
+
+    @media screen and (min-width: 2000px) {
+.main__nav ul{
+    font-size: 3em;
+    }
+    }
+
+
+/***********************/
+/* 03.  DROPDOWN            */
+/**********************/
+  
+.dropdown {
+    
+    display: flex;
+    justify-content: center;  
+  }
+
+.dropdown img{
+    cursor: pointer;
+  }
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #eedfdf;
+    border-radius: 5%;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    margin: 5em;
+    text-align: center;
+  }
+  
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+.dropdown-content{
+   
+	animation-name: fadeInOpacity;
+	animation-timing-function:ease-out;
+	animation-duration: 1s;
+}
+
+.dropdown a:hover{
+    background-color: black;
+    color: var(--clr-secondary);    
+  }
+  
+.show {display: block;}
+
+
+  @media screen and (min-width: 1025px){
+.dropdown img{
+    display:none;
+    }
+.dropdown{
+    display:none;
+    }
+  }
+
+/**************************/
+/*04. Hero                */
+/**************************/
+
+/* title = "Jesper Persson"*/
+
+.hero__title{
+    padding-top: 0.5em;
+    margin-bottom: 0;
+    font-weight:lighter;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+    @media screen and (min-width: 1025px) {
+.hero__title{
+    display:none;
+    }
+  }
+
+
+/**************************/
+/*05. Footer                */
+/**************************/
+
+.footer {
+    position: fixed;
+    display:flex;
+    justify-content: center;
+    padding: 10px 10px 0px 10px;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background:black;
+}
+.icons{
+    display: flex;
+    justify-content: center;
+    
+}
+.icons img{
+    height: 25px;
+    width: 25px;
+    margin-right: 3.5em;
+}
+     
+    @media screen and (min-width: 2000px)
+{
+    .footer{
+    height: 60px;
+    }
+
+    .icons img{
+    height: 40px;
+    width: 40px;
+}
+}
+
+/**************************/
+/*       Page = Index       */
+/*--------------------------*/
+/*01 .Main                  */          
+/**************************/
+
+/**************************/
+/*01. Main
+     Media settings        
+      1.1. 1025
+      1.2. 1025 and 680
+      1.3. 1025 and 580                            
+/**************************/
+
+/* places the computer in the middle*/
+.grid__container {
+    display: grid;
+  
+ }
+ .main__sidetitle{
+     display:none;
+ }
+ .slogan{
+     display: none;
+ }
+ .computer{
+     grid-area: computer;
+ }
+
+/* 1.1 Media settings, 1025*/
+
+    @media screen and (min-width: 1025px){
+
+.main__section {
+    display: grid;
+    }
+
+.grid__container{
+    display: grid;
+    grid-template-areas: 
+    "sidetext line . computer"
+    "footer footer footer footer";
+     }
+
+.main__sidetitle{
+    grid-area: sidetext;
+    display: flex;
+    justify-content:flex-end;
+    margin-right: 1vw;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 3vh;
+    margin-top: 1vh;
+    
+}
+
+.computer{
+    grid-area: computer;
+    margin-top: 10vh;
+    max-height: 80%;
+    z-index: -1;
+}
+
+.v__line{
+    grid-area: line;
+    border-left: var(--clr-secondary) solid;
+    border-width: 0.1rem;     
+     }
+
+.v1{
+    box-sizing: border-box;    
+     }
+
+.v2{
+    margin-left: 2em;
+    margin-bottom: 25%;
+    margin-top:25%;   
+     }
+
+.slogan{
+    display: flex;
+    position: absolute;
+    font-size: 4vh;
+    margin-left: 35%;
+    margin-top: 25%;
+    font-weight: lighter;
+     }
+
+.footer__container{ 
+         grid-area:footer;
+     }
+     }
+
+     /* 1.2 Media settings, 1025 and 680*/
+
+     @media screen and (min-width: 1025px) and (max-height:680px){
+
+.v1{
+    margin-bottom: 55%;
+
+    }
+
+ .v2{
+    margin-top:25%;
+    margin-bottom: 20vh;
+    }
+    }
+
+     /* 1.3 Media settings, 1025 and 580*/
+
+     @media screen and (min-width: 1025px) and (max-height:560px){
+
+    
+ .main__sidetitle{
+    display:none;
+    }
+
+.slogan{
+    display: none;
+    }
+
+.v__line{
+    display: none;
+    }
+
+body{
+    border:none;
+    }
+     }
+     
+/**************************/
+/*       Page = Projects    */
+/*--------------------------*/
+/*01  Slides                */  
+/*02. Modals + captions     */
+/*02. Animation/Fade        */                       
+/**************************/
+
+  
+/**************************/
+/*01. Slides         */
+/**************************/
+
+.slides__container{
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+    background-color: black;
+   
+}
+
+.my__slides{
+    display: none;
+}
+
+.prev{
+    cursor: pointer;
+    position: absolute;
+    top: 35%;
+    padding: 20px;
+    color: var(--clr-secondary-dark);
+    border-radius: 0 10% 10% 0;
+    font-size: 1rem;
+    transition: 3s ease;
+}
+
+.next{
+    cursor: pointer;
+    position: absolute;
+    top:35%;
+    padding: 20px;
+    color: var(--clr-secondary-dark);
+    border-radius: 10% 0 0 10%;
+    font-size: 1rem;
+    transition: 3s ease;
+}
+
+.next {
+    right: 0;
+  }
+
+.next:hover, .next:focus,
+.prev:hover, .prev:focus{
+    background-color: var(--clr-secondary-dark);
+    color: black;
+}
+
+    @media screen and (min-width: 1025px) and (min-height: 710px){
+.slides__container
+     {margin-top: 10vh;}
+}
+
+/**************************/
+/*02. Modals + captions    */
+/**************************/
+    
+.modaltext{
+    color:black;
+}
+.playgame {
+    text-align: center;
+}
+
+.modal-title{
+    color: black;
+   
+}
+
+.btn{
+    padding: 0 1vh 0 1vh;
+    background-color: rgb(141, 34, 34);
+
+}
+.modal-footer{
+    display:flex;
+    justify-content: center;
+}
+
+.img-text{
+    font-style: italic;
+    font-size: 12px;
+    text-align: center;
+}
+
+  /* Caption text */
+.text {
+    color: var(--clr-secondary-dark);
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .text-three{
+      color: black;
+  }
+
+  .numbertext{
+    position: absolute;
+    right:0;
+}
+
+.info-text{
+    text-align: center;
+    font-size: 2vh;
+}
+
+
+/**************************/
+/*03. Animation           */
+/**************************/
+
+  .my__fade{
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-timing-function: ease-in;
+	animation-duration: 1.5s;
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0.2;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+
+/**************************/
+/*      Page = Contact    */
+/*------------------------*/
+/*01  container           */  
+/*02. header              */
+/*03. Cards               */ 
+/*04. Animation           */ 
+/*05. Media Screen        */                                      
+/**************************/
+
+
+/**************************/
+/*01. Container           */
+/**************************/
+
+.contact{
+    width: 100vw;
+    text-align: center;   
+}
+
+.contact__container{
+    width: 96vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap:1em; 
+}
+
+/*************************************/
+/*02.Header (only displays on mobile)*/
+/*************************************/
+
+.contact h2{
+    font-weight:250;
+    width: 100vw; 
+}
+
+/*************************************/
+/*03.Cards                           */
+/*************************************/
+.contact img{
+    object-position: center;
+    object-fit:fill;
+    width: 30px;
+    height: 50px;
+}
+
+.card{
+
+    background-color: var(--clr-secondary);
+    min-height: 180px;
+    min-width: 180px;
+    max-height: 100%;
+    max-width: 100%;
+    font-size: 2vh;
+    font-weight: 200;
+    width: 180px;
+    opacity: 0.9;
+    color: black;
+    border-radius: 5%;
+    box-shadow: var(--clr-secondary) 0px 5px 15px;  
+}
+
+.card:hover{
+    opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-timing-function: ease-in;
+	animation-duration: 1.5s;
+}
+
+.card a{
+    cursor: pointer;
+    color:black;
+    text-decoration: none;    
+    }
+
+/**************************/
+/*04. Animation           */
+/**************************/
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0.2;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+/**************************/
+/*05. Media Screen        */
+/**************************/
+
+    @media screen and (min-width: 1025px){
+
+.contact h2{
+    display: none;
+    
+}
+.card{
+    margin-top: 10%;
+}
+}
+
+    @media screen and (max-width: 392px){
+
+.card__4{
+    margin-bottom: 5em;
+}
+}
+
+    @media screen and (min-height: 840px){
+
+.card{
+    width: 300px !important;
+    }
+    }
+
+    @media screen and (min-height: 1040px){
+
+.card{
+     max-width: 400px !important;
+     max-width: 400px !important;
+     font-size: 1vw;
+        }
+        }
+
+/**************************/
+/*      Page = About      */
+/*------------------------*/
+/*01  img                 */  
+/*02. My Story            */ 
+/*03. Media Screen        */                                      
+/**************************/
+
+
+/**************************/
+/*01. Image              */
+/**************************/
+
+.img-container{
+
+display: flex;
+justify-content: center;
+margin-top: 2em;
+margin-bottom: 0;
+}
+
+.img-about{
+    max-height: 300px;
+    max-width: 400px;
+    border-radius: 50%;
+}
+
+/**************************/
+/*02. My Story            */
+/**************************/
+
+.mystory {
+    margin: 2em auto;
+    margin-top: 0;
+    padding: 1em 2em;
+    max-width: 40rem;
+    box-shadow: 0 0.125em 0.25em 0 rgba(0, 0, 0, 0.2);
+   height: 80%;
+   margin-bottom: 20vh;
+    
+    color:var(--clr-secondary);
+  }
+
+  .mystory h2{
+      text-align: center;
+      font-weight: 300;
+  }
+
+  .reach-out{
+      cursor: pointer;
+      color: white;
+      font-style: italic;   
+  }
+
+  .reach-out:hover{
+      font-size: large;
+      color: var(--clr--box);
+  }
+
+  .last-sentence{
+      text-align: center;
+      
+      }
+
+/**************************/
+/*03. Media Screen            */
+/**************************/
+  
+    @media screen and (min-width: 1025px){
+
+.about-body{
+        height: 95em;
+    }
+    }
+
+
+    @media screen and (min-width: 2300px){
+
+.about-body{
+    height: 90vh;
+}
+
+.mystory{
+   max-width: 80rem;
+}
+}
+
+
+   /**************************/
+/*       Page = Game       */
+/*--------------------------*/
+/*01 .Game                  */          
+/**************************/
+
+
+.grid{
+    width: 400px;
+    height: 600px;
+    background-color: yellow;
+    position: relative;
+    font-size: 120px;
+    text-align: center;
+    color: black;
+}
+
+.doodler{
+    width: 60px;
+    height: 85px;
+    background-color: red;
+    position: absolute;
+}
+
+.platform{
+    width: 85px;
+    height: 15px;
+    background-color: green;
+    position: absolute;
+    
+}
+
+.go-again{
+    background-color: red;
+    text-align: center;
+}
+
+
